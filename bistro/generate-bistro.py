@@ -48,6 +48,7 @@ bpy.ops.object.select_all(action="DESELECT")
 # Disable animation for now because otherwise applying transform _totally_ messes up the animation.
 #
 bpy.ops.import_scene.fbx(filepath=fbx_exterior_file_path, use_anim=False)
+bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
 
 #
 # Scale the generated BistroExterior empty, then deparent all of its children
