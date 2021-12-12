@@ -1,7 +1,7 @@
 .DS_Store
-pbr-test/pbr-test.blend
+pbr-test/pbr-test.blend*
 bistro/Bistro_v5_2
 bistro/Bistro_v5_2.zip
 bistro/Textures
 bistro/*.fbx
-bistro/bistro.blend
+bistro/bistro.blend*
