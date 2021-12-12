@@ -48,34 +48,31 @@ bpy.ops.object.select_all(action="DESELECT")
 # Disable animation for now because otherwise applying transform _totally_ messes up the animation.
 #
 bpy.ops.import_scene.fbx(filepath=fbx_exterior_file_path, use_anim=False)
-bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
 
 #
-# Scale the generated BistroExterior empty, then deparent all of its children
+# Set the BistroExterior empty scale to correct value, then deparent all of its children
 #
-for object in bpy.data.objects:
-    if object.name == "BistroExterior":
-        object.scale = [0.623, 0.623, 0.623]
-        child: bpy.types.Object
-        for child in object.children:
-            child.select_set(True)
+object = bpy.data.objects["BistroExterior"]
+object.scale = [0.01, 0.01, 0.01]
+child: bpy.types.Object
+for child in object.children:
+    child.select_set(True)
 
 bpy.ops.object.parent_clear(type="CLEAR_KEEP_TRANSFORM")
-
-bpy.ops.object.select_all(action="SELECT")
 bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
 
 #
 # Give all objects sane origins
 #
+bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.origin_set(type="ORIGIN_GEOMETRY", center="MEDIAN")
+bpy.ops.object.select_all(action="DESELECT")
 
 #
 # Change light direction around
 #
-for object in bpy.data.objects:
-    if object.name == "directionalLight1":
-        object.rotation_euler = [5.951573, -0.2303, 1.1397]
+object = bpy.data.objects["directionalLight1"]
+object.rotation_euler = [5.951573, -0.2303, 1.1397]
 
 #
 # Fix the materials (the nodes aren't properly hooked up to the BSDF node)
