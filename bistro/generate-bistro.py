@@ -13,6 +13,7 @@ fbx_exterior_file_path = os.path.join(working_dir, "BistroExterior.fbx")
 #TODO: Remove the empty on the exterior FBX
 #TODO: Make sure it saves texture paths relative instead of absolute?
 #TODO: Automatically handle copying data out of the Bistro_v5_2 folder to this folder?
+#TODO: Add ambient light to the world
 
 #
 # Destroy all existing scenes, leaving just a new empty scene
