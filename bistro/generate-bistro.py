@@ -70,6 +70,13 @@ bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
 bpy.ops.object.origin_set(type="ORIGIN_GEOMETRY", center="MEDIAN")
 
 #
+# Change light direction around
+#
+for object in bpy.data.objects:
+    if object.name == "directionalLight1":
+        object.rotation_euler = [5.951573, -0.2303, 1.1397]
+
+#
 # Fix the materials (the nodes aren't properly hooked up to the BSDF node)
 #
 material: bpy.types.Material
