@@ -154,4 +154,9 @@ for material in bpy.data.materials:
         material.blend_method = "BLEND"
         material.shadow_method = "NONE"
 
-# bpy.ops.wm.save_as_mainfile(filepath="bistro.blend", compress=True)
+#
+# Save file to disk. Enabling compression reduces the blend file size. We also want to
+# save all paths as relative so that the .blend/textures folder can be relocated
+# together and still work
+#
+bpy.ops.wm.save_as_mainfile(filepath="bistro.blend", compress=True, relative_remap=True)

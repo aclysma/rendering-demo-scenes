@@ -92,4 +92,9 @@ bpy.context.scene.render.engine = 'BLENDER_EEVEE'
 #bpy.context.scene.render.filepath='pbr-test-render.png'
 #bpy.ops.render.render(write_still=1)
 
-bpy.ops.wm.save_as_mainfile(filepath='pbr-test.blend', compress=True)
+#
+# Save file to disk. Enabling compression reduces the blend file size. We also want to
+# save all paths as relative so that the .blend/textures folder can be relocated
+# together and still work
+#
+bpy.ops.wm.save_as_mainfile(filepath='pbr-test.blend', compress=True, relative_remap=True)
