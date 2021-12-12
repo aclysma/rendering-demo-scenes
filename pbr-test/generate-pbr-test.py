@@ -11,6 +11,8 @@ for scene in bpy.data.scenes:
     if scene != empty_scene:
         bpy.context.window.scene = scene
         bpy.ops.scene.delete()
+
+empty_scene.name = "Scene"
         
 #
 # Garbage collect all blender objects not referenced by the (now empty) scene

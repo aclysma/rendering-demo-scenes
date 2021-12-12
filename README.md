@@ -25,9 +25,30 @@ particular scene.
 This test scene does not use upstream assets. It programmatically generates spheres with varying
 metalness and roughness. It is intended to be used to verify basic correctness of simple PBR rendering.
 
+[Documentation](pbr-test/pbr-test.md)
+
 [![PBR Test eevee render](screenshots/pbr-test-eevee-small.png)](screenshots/pbr-test-eevee.png)
 
-## License
+### bistro
+
+"Amazon Lumberyard Bistro, Open Research Content Archive (ORCA)" (http://developer.nvidia.com/orca/amazon-lumberyard-bistro)
+
+The scripts work with v5.2 which was current as of Dec 7, 2021.
+
+## Developer Setup (for creating/modifying scripts)
+
+In general, you can create an empty blender file, go to the Scripting tab in blender, 
+create a script, copy/paste an existing script, and hit run. This is a good way to get started
+and iterate on a script.
+
+If you'd like to edit the script outside of blender, you can grab the `fake-bpy-module-x-yy` via pip
+for completion/linting in the editor of your choice (see https://github.com/nutti/fake-bpy-module)
+
+Once you're happy with the results and want to share your script
+ * Save your script to a separate python file
+ * Add a readme with instructions/licensing info
+
+## Licenses
 
 ### Source Art Assets
 
