@@ -6,11 +6,8 @@ working_dir = os.path.dirname(blend_path)
 fbx_interior_file_path = os.path.join(working_dir, "BistroInterior.fbx")
 fbx_exterior_file_path = os.path.join(working_dir, "BistroExterior.fbx")
 
-# TODO: The exterior FBX has opaque windows that need to be removed
 # TODO: Ambient occlusion not set up properly
-# TODO: Make sure it saves texture paths relative instead of absolute?
 # TODO: Automatically handle copying data out of the Bistro_v5_2 folder to this folder?
-# TODO: Add ambient light to the world
 
 #
 # Destroy all existing scenes, leaving just a new empty scene
