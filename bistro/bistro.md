@@ -28,12 +28,16 @@ rendering-demo-scenes
      - Antenna_Metal_BaseColor.dds
      - ...
    - BistroExterior.fbx
-   - ...
+   - BistroInterior.fbx
 ```
 
 This ensures that the resulting .blend file will references ./Textures/*.dds
 
-TODO: Instructions
+To produce the .blend file, run `blender -b -P generate-bistro.py`
+
+On macOS, the binary is embedded in the .app file. So run something like `/Applications/Blender.app/Contents/MacOS/Blender -b -P generate-bistro.py`
+
+The script can be adjusted to only import the interior or exterior FBX file
 
 ## Source Art License
 

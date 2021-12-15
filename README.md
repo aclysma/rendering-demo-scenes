@@ -20,6 +20,16 @@ particular scene.
 
 ## Scenes
 
+### bistro
+
+"Amazon Lumberyard Bistro, Open Research Content Archive (ORCA)" (http://developer.nvidia.com/orca/amazon-lumberyard-bistro)
+
+The scripts work with v5.2 which was current as of Dec 7, 2021.
+
+[Documentation](bistro/bistro.md)
+
+[![Bistro render](screenshots/bistro-small.png)](screenshots/bistro.png)
+
 ### pbr-test
 
 This test scene does not use upstream assets. It programmatically generates spheres with varying
@@ -28,12 +38,6 @@ metalness and roughness. It is intended to be used to verify basic correctness o
 [Documentation](pbr-test/pbr-test.md)
 
 [![PBR Test eevee render](screenshots/pbr-test-eevee-small.png)](screenshots/pbr-test-eevee.png)
-
-### bistro
-
-"Amazon Lumberyard Bistro, Open Research Content Archive (ORCA)" (http://developer.nvidia.com/orca/amazon-lumberyard-bistro)
-
-The scripts work with v5.2 which was current as of Dec 7, 2021.
 
 ## Developer Setup (for creating/modifying scripts)
 
